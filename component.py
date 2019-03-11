@@ -14,6 +14,7 @@ class Component:
         The presence of a parent serial means that the component phycally resides
         inside another component. 
     '''
+
     def isInternalComponent(self):
         return self.parentSerial == None
 
