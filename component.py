@@ -18,16 +18,20 @@ class Component:
     def isInternalComponent(self):
         return self.parentSerial == None
 
-
     def getModel(self):
         return self.model
-
 
     def getSerial(self):
         return self.serial
 
     def getParent(self):
         return self.parentSerial
+
+    def __repr__(self):
+        if not self.isEmpty():
+            return str(self.serial)+"\t"+str(self.model)
+        else:
+            return "Empty Component"
 
     def __str__(self):
         if not self.isEmpty():
